@@ -26,5 +26,24 @@ DB_USERNAME=root
 DB_PASSWORD=root
 ```
 
-## 3.
+## 3. creare il file di migrazione
+- da terminale
+``` bash
+php artisan make:migration create_nome-migrazione_table
+```
 
+## 4. inserire i dati che voglio inserire nelle colonne
+- nel file migration appena creato
+``` php
+Schema::create('vacanze', function (Blueprint $table) {
+    $table->id();
+    $table->string('nome-colonna');
+    $table->timestamps();
+});
+```
+
+## 5. effettuare la migrazione
+- da terminale
+``` bash
+php artisan migrate
+```
