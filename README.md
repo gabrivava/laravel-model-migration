@@ -47,3 +47,17 @@ Schema::create('vacanze', function (Blueprint $table) {
 ``` bash
 php artisan migrate
 ```
+
+- rimuovere le tabelle
+``` bash
+php artisan migrate:rollback
+```
+
+## 6. aggiungere dati con tinker
+``` bash
+php artisan tinker
+
+$singolo = new App\Model
+$singolo->colonna = valore
+$singolo->save()
+```
